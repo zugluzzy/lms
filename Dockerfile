@@ -22,7 +22,7 @@ RUN userdel squeezeboxserver
 VOLUME $SQUEEZE_VOL
 EXPOSE 3483 3483/udp 9000 9090
 
-COPY etc/avahi/avahi-daemon.conf /etc/avahi/avahi-daemon.conf
+COPY ./etc/avahi/avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 COPY entrypoint.sh /entrypoint.sh
 COPY start-squeezebox.sh /start-squeezebox.sh
 RUN chmod 755 /entrypoint.sh /start-squeezebox.sh
